@@ -165,6 +165,7 @@ extern String *dSSoncat(String *dest, const conString *src, int start, int len, 
 extern String *dSncat  (String *dest, const char *src, int n, FL);
 extern String *dSfncat (String *dest, const char *src, int n, FL);
 extern String *Stringstriptrail(String *str);
+extern String *Stringunquote(String *str);
 extern int Stringcmp(const conString *s, const conString *t);
 
 extern void check_charattrs(String *str, int n, cattr_t attrs,

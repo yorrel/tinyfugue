@@ -107,7 +107,7 @@ struct Value *handle_trigger_command(String *args, int offset)
     }
 
     old_incoming_text = incoming_text;
-    (incoming_text = Stringodup(CS(args), offset))->links++;
+    (incoming_text = Stringunquote(Stringodup(CS(args), offset)))->links++;
 
     result = find_and_run_matches(NULL, hooknum, &incoming_text, world,
 	is_global, exec_list_long);

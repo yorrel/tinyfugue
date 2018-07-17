@@ -384,6 +384,19 @@ String *Stringstriptrail(String *str)
     return str;
 }
 
+String *Stringunquote(String *str)
+{
+    if (str->len > 2 && str->data[0] == '"' && str->data[str->len - 1] == '"') {
+        for (int i=1; str->data[i]!='\0'; i++) {
+            str->data[i-1] = str->data[i];
+        }
+        str->data[str->len - 2] = '\0';
+        str->data[str->len - 1] = '\0';
+	str->len = str->len - 2;
+    }
+    return str;
+}
+
 /* like strcmp for Strings, extended to cover their attrs too. */
 int Stringcmp(const conString *s, const conString *t)
 {

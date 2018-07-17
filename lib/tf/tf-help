@@ -4057,7 +4057,9 @@ Text Utilities
   if <[4mtext[24m> had come from a [1msocket[22;0m or a hook event had occurred with <[4mtext[24m> as 
   its arguments.  The return value of [1m/trigger[22;0m is the number of (non-[1mquiet[22;0m) 
   [1mmacros[22;0m that were executed.  [1m/Trigger[22;0m is useful for debugging [1mtriggers[22;0m and 
-  [1mhooks[22;0m.  
+  [1mhooks[22;0m.
+  If <[4mtext[24m> starts and ends with quotes, the text between the quotes is
+  evaluated. This is useful, if a trigger starts with spaces.
 
   [1mOptions:[22;0m 
   -g      Match "global" [1mtriggers[22;0m or [1mhooks[22;0m that were not defined with [1m/def[22;0m [1m-w[22;0m 
